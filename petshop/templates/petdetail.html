@@ -1,3 +1,4 @@
+  
 {% extends "base.html" %}
 {% block body %}
 <h1 class="display-1">Pet details</h1>
@@ -16,6 +17,9 @@
   {% for t in tags %}
   <a class="tag" href="{{url_for('pets.search', field='tag', value=t)}}"><span class="badge bg-secondary">{{t}}</span></a>
   {% endfor %}
+   <p class="description"> 
+      {{description}}
+   </p>
 </p>
 <p>
   <a class="btn btn-primary" href="{{url_for('pets.edit', pid=id)}}">Edit</a>
